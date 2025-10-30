@@ -1,0 +1,260 @@
+🌿 Nueva estructura del proyecto
+cafeteria-artesanal/
+│
+├── index.html   → Estructura principal (contenido)
+├── style.css    → Estilos visuales
+└── script.js    → Interactividad (botón de color)
+
+🎨 Paleta de colores renovada
+Elemento	Color	Descripción
+Fondo principal	#f3eee3	Beige cálido
+Marrón oscuro	#4b2e05	Café tostado
+Marrón medio	#a47148	Café con leche
+Crema	#fffaf3	Suave y limpio
+Acento	#d4a373	Toque dorado café
+
+🖋️ Fuente: "Poppins", sans-serif para texto + "Playfair Display", serif para títulos (elegante y artesanal)
+
+💻 Código actualizado
+🟤 index.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aroma Café - Cafetería Artesanal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">☕ <span>Aroma Café</span></div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Tu rincón artesanal de café</h1>
+            <p>Disfruta de una experiencia única con nuestras mezclas de granos seleccionados, tostados con pasión y servidos con amor.</p>
+            <button id="colorButton">Cambiar color de fondo</button>
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <h2>☕ Nuestro Menú Artesanal</h2>
+        <div class="productos">
+            <div class="producto">
+                <img src="https://cdn.pixabay.com/photo/2017/05/23/22/36/coffee-2337951_1280.jpg" alt="Café espresso">
+                <h3>Espresso artesanal</h3>
+                <p>Intenso, puro y con el auténtico aroma del café tostado a mano.</p>
+            </div>
+            <div class="producto">
+                <img src="https://cdn.pixabay.com/photo/2016/02/18/18/22/coffee-1209898_1280.jpg" alt="Capuchino cremoso">
+                <h3>Capuchino cremoso</h3>
+                <p>Una mezcla perfecta de leche espumosa y espresso fuerte.</p>
+            </div>
+            <div class="producto">
+                <img src="https://cdn.pixabay.com/photo/2020/04/17/10/39/iced-coffee-5055073_1280.jpg" alt="Cold brew">
+                <h3>Cold Brew</h3>
+                <p>Refrescante, suave y preparado lentamente para conservar su esencia.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <p>📍 Calle Aroma #45, Quito, Ecuador</p>
+        <p>📞 099-123-4567 | ✉️ contacto@aromacafe.com</p>
+        <p>&copy; 2025 Aroma Café. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+
+🟤 style.css
+/* ===== FUENTES Y COLORES ===== */
+:root {
+    --color-fondo: #f3eee3;
+    --color-oscuro: #4b2e05;
+    --color-medio: #a47148;
+    --color-claro: #fffaf3;
+    --color-acento: #d4a373;
+    --sombra: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-oscuro);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.8s ease;
+}
+
+/* ===== ENCABEZADO ===== */
+header {
+    background-color: var(--color-oscuro);
+    color: var(--color-claro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 4px 10px var(--sombra);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+}
+
+nav a {
+    color: var(--color-claro);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--color-acento);
+}
+
+/* ===== SECCIÓN HERO ===== */
+.hero {
+    background: linear-gradient(rgba(75,46,5,0.5), rgba(75,46,5,0.5)),
+                url('https://cdn.pixabay.com/photo/2016/11/21/15/59/coffee-1845350_1280.jpg') center/cover no-repeat;
+    color: var(--color-claro);
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero-content {
+    background-color: rgba(0,0,0,0.4);
+    display: inline-block;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: var(--color-acento);
+    color: var(--color-claro);
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: var(--color-medio);
+    transform: scale(1.05);
+}
+
+/* ===== MENÚ ===== */
+.menu {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: var(--color-claro);
+}
+
+.menu h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: var(--color-oscuro);
+}
+
+.productos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.producto {
+    background-color: var(--color-fondo);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px var(--sombra);
+    width: 260px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px var(--sombra);
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* ===== PIE DE PÁGINA ===== */
+footer {
+    background-color: var(--color-oscuro);
+    color: var(--color-claro);
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    font-size: 0.9em;
+}Crea una página web completa desde cero sobre una cafetería artesanal, usando solo HTML, CSS (en archivo externo) y JavaScript (en archivo externo).
+Explica la estructura del proyecto y qué hace cada archivo.
+Agrega una interacción simple con JavaScript (por ejemplo, un botón que cambie el color de fondo del sitio).
+Selecciona una paleta de colores y fuente que combinen con el tema de una cafetería.
+Muestra el código de los archivos index.html, style.css y script.js, y explica cómo abrir el proyecto en un navegador
+
+🟤 script.js
+// Botón que cambia el color de fondo del sitio
+const botonColor = document.getElementById("colorButton");
+const colores = ["#f3eee3", "#fffaf3", "#e0d4b7", "#d4a373"];
+let indice = 0;
+
+botonColor.addEventListener("click", () => {
+    indice = (indice + 1) % colores.length;
+    document.body.style.backgroundColor = colores[indice];
+});
+
+🚀 Cómo abrir el proyecto
+
+Crea una carpeta llamada cafeteria-artesanal.
+
+Guarda dentro los tres archivos (index.html, style.css, script.js).
+
+Abre la carpeta en tu computadora.
+
+Haz doble clic en index.html → se abrirá en tu navegador.
+
+¡Listo! Verás un sitio cálido, profesional y animado.
+Haz clic en el botón “Cambiar color de fondo” para ver la interacción.

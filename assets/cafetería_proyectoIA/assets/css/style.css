@@ -1,0 +1,124 @@
+:root {
+    --color-fondo: #f3eee3;
+    --color-oscuro: #4b2e05;
+    --color-medio: #a47148;
+    --color-claro: #fffaf3;
+    --color-acento: #d4a373;
+    --sombra: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-oscuro);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.8s ease;
+}
+
+header {
+    background-color: var(--color-oscuro);
+    color: var(--color-claro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 4px 10px var(--sombra);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+}
+
+nav a {
+    color: var(--color-claro);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--color-acento);
+}
+
+.hero {
+    background: linear-gradient(rgba(75,46,5,0.5), rgba(75,46,5,0.5)),
+                url('assets/imagenes/espresso.jpg') center/cover no-repeat;
+    color: var(--color-claro);
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero-content {
+    background-color: rgba(0,0,0,0.4);
+    display: inline-block;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: var(--color-acento);
+    color: var(--color-claro);
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: var(--color-medio);
+    transform: scale(1.05);
+}
+
+.menu {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: var(--color-claro);
+}
+
+.menu h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: var(--color-oscuro);
+}
+
+.productos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.producto {
+    background-color: var(--color-fondo);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px v
